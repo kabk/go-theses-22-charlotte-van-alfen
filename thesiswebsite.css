@@ -57,6 +57,34 @@ div.landing figure {
   font-family: "CourierSans-Regular";
 }
 
+a {
+  color: fuchsia;
+  text-decoration: none;
+}
+
+details {
+  text-align: left;
+}
+
+details.is-read-more summary {
+  font-size: 2rem;
+  line-height: 2.5;
+  color: fuchsia;
+}
+
+summary {
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+/* lopende bodytext */
+section p {
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
 h1 {
   font-size: 2.5rem;
   line-height: 1;
@@ -68,6 +96,7 @@ h1 {
   margin: 0;
   border-radius: 50%;
   box-sizing: border-box;
+  font-weight: lighter;
 }
 
 #title a {
@@ -77,19 +106,31 @@ h1 {
 
 h2 {
   font-size: 6rem;
-  /* font-weight: bold; */
+  margin-top: 8% !important;
+  margin-bottom: 3% !important;
+  font-weight: lighter;
 }
 
 h3 {
   font-size: 3rem;
+  font-weight: lighter;
   line-height: 1.2;
-  text-align: center;
+  /* text-align: center; */
+  margin-top: 1% !important;
+  margin-bottom: 1% !important;
 }
 
 h4 {
+  font-size: 2.5rem;
+  font-weight:lighter;
+  text-align: center;
+  margin-top: 10% !important;
+  margin-bottom: 1% !important;
+}
+
+h5 {
   padding-top: none;
   text-align: center;
-  font-weight: bold;
 }
 
 /* START THOMAS EDIT */
@@ -126,34 +167,6 @@ figure figcaption {
   text-align: center;
 }
 
-a {
-  color: fuchsia;
-  text-decoration: none;
-}
-
-details {
-  text-align: left;
-}
-
-details.is-read-more summary {
-  font-size: 2rem;
-  line-height: 2.5;
-  color: fuchsia;
-}
-
-summary {
-  font-size: 6rem;
-  line-height: 1;
-  font-weight: normal;
-  cursor: pointer;
-}
-
-/* lopende bodytext */
-section p {
-  font-size: 1.3rem;
-  line-height: 1.4;
-}
-
 #abstract {
   margin-left: 5%;
   margin-right: 5%;
@@ -168,7 +181,7 @@ section p {
   margin-left: 5%;
   margin-right: 5%;
   padding: 5%;
-  background-color: antiquewhite;
+  background-color:gainsboro;
   padding: 4%;
 }
 
@@ -198,14 +211,14 @@ section p {
   margin-left: 5%;
   margin-right: 5%;
   padding: 4%;
-  background-color:royalblue;
+  background-color: royalblue;
 }
 
 #furtherreads {
   margin-left: 5%;
   margin-right: 5%;
   padding: 4%;
-  background-color: antiquewhite;
+  background-color:gainsboro;
 }
 
 ol {
@@ -215,10 +228,18 @@ ol {
 
 footer {
   font-size: 1rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 4%;
   line-height: 1;
-  padding-top: 5%;
+  padding-top: 1rem;
   text-align: center;
+  background-color: aliceblue;
 }
+
+/* a.external-link img {
+
+} */
 
 *:focus {
   outline: none;
@@ -258,24 +279,26 @@ chapter1.horizontal-snap {
 }
 
 a.external-link {
-  color: black;
+  color: fuchsia;
   text-decoration: underline;
 }
 
-li:target {
-  display: block;
-  position: relative;
-  top: -100px;
-  visibility: hidden;
+section.footnotes.footnotes-end-of-document ol li p{
+    font-size: 1rem;
+  }
+
+/* article.footnotes.footnotes-end-of-document li p{
+  font-size: 1rem;
 }
 
-a.footnote-back {
-  padding-top: 10%;
-}
+article.footnotes.footnotes-end-of-document li {
+  font-size: 1rem;
+} */
 
-sup {
-  padding-top: 10%;
-}
+/* a.external-link {
+  color:orangered;
+} */
+
 
 /* iphone version */
 
@@ -290,16 +313,28 @@ sup {
     color: black;
   }
 
+  summary {
+    font-size: 6rem;
+    font-weight: lighter;
+  }
+
   section h2 {
     font-size: 6rem;
     /* abstract title */
   }
 
-  summary {
-    font-size: 6rem;
+  section h3{
+    font-size: 4rem;
+    font-weight:lighter;
   }
 
   section h4 {
+    font-size: 4rem;
+    font-weight:lighter;
+    /* kopjes in hoofdstukken */
+  }
+
+  section h5 {
     font-size: 2rem;
     /* source onder horizontal snap */
   }
@@ -313,10 +348,11 @@ sup {
   }
 
   footer {
-    2rem;
+    padding: 2rem;
   }
 
   .horizontal-snap {
+    height: 95%;
     padding-top: 1rem;
   }
   
@@ -328,7 +364,8 @@ sup {
     border-radius: 1rem;
   }
 
+  section.footnotes.footnotes-end-of-document ol li p{
+    font-size: 2rem;
+  }
 
 }
-
-/* END THOMAS EDIT */
