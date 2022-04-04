@@ -5,9 +5,8 @@
 
 html {
   scroll-behavior: smooth;
-  /* START THOMAS EDIT */
-  font-size: clamp(.50rem, 1.50vw, 1.50vw)
-    /* END THOMAS EDIT */
+  font-size: clamp(.50rem, 1.50vw, 1.50vw);
+  /* cursor: url(desktop/markdown/content/logo.png), auto; */
 }
 
 body {
@@ -75,7 +74,7 @@ details.is-read-more summary {
 summary {
   font-size: 6rem;
   line-height: 1;
-  font-weight: bolder;
+  font-weight: lighter;
   cursor: pointer;
 }
 
@@ -237,10 +236,6 @@ footer {
   background-color: aliceblue;
 }
 
-/* a.external-link img {
-
-} */
-
 *:focus {
   outline: none;
 }
@@ -252,6 +247,7 @@ footer {
   gap: 1rem;
   height: 95vh;
   width: 100%;
+  text-align: center;
   padding: 0.5rem;
   overflow-y: auto;
   overscroll-behavior-x: contain;
@@ -281,24 +277,41 @@ chapter1.horizontal-snap {
 a.external-link {
   color: fuchsia;
   text-decoration: underline;
+  position: relative;
+}
+
+a.portfolio-link {
+  display: block;
+  padding-top: 2em;
+}
+
+.external-link--tooltip {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+a.external-link:hover .external-link--tooltip {
+  display: block;
+}
+
+#chapter3 a{
+  color:blueviolet;
 }
 
 section.footnotes.footnotes-end-of-document ol li p{
     font-size: 1rem;
   }
 
-/* article.footnotes.footnotes-end-of-document li p{
-  font-size: 1rem;
+hr {
+  color: black !important;
 }
 
-article.footnotes.footnotes-end-of-document li {
-  font-size: 1rem;
-} */
-
-/* a.external-link {
-  color:orangered;
-} */
-
+a.external-link portfolio-link{
+  margin-top: 1em;
+}
 
 /* iphone version */
 
@@ -349,6 +362,7 @@ article.footnotes.footnotes-end-of-document li {
 
   footer {
     padding: 2rem;
+    font-size: 2rem;
   }
 
   .horizontal-snap {
