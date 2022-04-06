@@ -1,11 +1,9 @@
-<!-- saved from url=(0037)https://voetnoten-charlotte.surge.sh/ -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Beyond spectacular, made vernacular</title>
     <link rel="icon" type="image/x-icon" href="/content/images/logo.jpg">
-    <!-- <link rel="stylesheet" href="thesiswebsite.css" type="text/css"> -->
     <link rel="stylesheet" href="thesiswebsite.css" type="text/css">
 </head>
 
@@ -178,7 +176,7 @@
     </section>
 
     <section id="chapter1">
-        <details open="">
+        <details>
             <summary>Past</summary>
             <h3>Vernacular of the past: a case study of 6 periods of IFFR posters</h3>
             <p><strong>I chose six designers which I think most interestingly reflect
@@ -905,7 +903,7 @@
     </script>
 
 <script>
-    (() => {
+    document.addEventListener("DOMContentLoaded", () => {
         // Wanneer deze functie wordt opgeroepen zal de browser naar de class .footnotes scrollen 
         const voetnotenIntoView = (e) => {
             const sectieId = e.target.closest('section').id;
